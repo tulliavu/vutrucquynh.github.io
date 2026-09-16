@@ -286,9 +286,9 @@ li { margin-bottom: 0.2rem; }
 
   a { text-decoration: none; }
 
-  /* Links are not clickable on paper, so spell them out */
-  .body a[href^="http"]::after,
-  .contact a[href^="http"]::after {
+  /* Links are not clickable on paper, so spell them out. Scoped to main so
+     the standfirst, which carries the supervisor links, is covered too. */
+  main a[href^="http"]::after {
     content: " (" attr(href) ")";
     font-size: 8.5pt;
     color: #555;
