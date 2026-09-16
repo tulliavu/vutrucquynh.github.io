@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Vu Truc Quynh</title>
-<meta name="description" content="Vu Truc Quynh is a Master's student at Hiroshima University researching where public electric vehicle charging stations should be sited in Ho Chi Minh City.">
+<meta name="description" content="Vu Truc Quynh builds optimization models for electric vehicle charging infrastructure — siting and sizing public charging networks as mixed integer programs, solved in Python. Master of Philosophy candidate at Hiroshima University.">
 <meta name="author" content="Vu Truc Quynh">
 <link rel="canonical" href="https://tulliavu.github.io/vutrucquynh.github.io/">
 
@@ -14,7 +14,7 @@
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Vu Truc Quynh">
-<meta property="og:description" content="Master's student at Hiroshima University researching where public electric vehicle charging stations should be sited in Ho Chi Minh City.">
+<meta property="og:description" content="Optimization models for electric vehicle charging infrastructure — siting and sizing public charging networks as mixed integer programs, solved in Python.">
 <meta property="og:url" content="https://tulliavu.github.io/vutrucquynh.github.io/">
 <meta property="og:image" content="https://tulliavu.github.io/vutrucquynh.github.io/images/avatar.jpg">
 <meta property="og:image:width" content="675">
@@ -22,6 +22,7 @@
 <meta property="og:image:alt" content="Portrait of Vu Truc Quynh">
 <meta property="profile:first_name" content="Truc Quynh">
 <meta property="profile:last_name" content="Vu">
+<meta property="profile:username" content="tulliavu">
 <meta name="twitter:card" content="summary">
 
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -35,21 +36,28 @@
   "url": "https://tulliavu.github.io/vutrucquynh.github.io/",
   "image": "https://tulliavu.github.io/vutrucquynh.github.io/images/avatar.jpg",
   "email": "mailto:vutrucquynh136@gmail.com",
-  "jobTitle": "Master's student",
+  "jobTitle": "Master of Philosophy candidate",
   "affiliation": {
     "@type": "CollegeOrUniversity",
-    "name": "Hiroshima University",
+    "name": "Graduate School of Innovation and Practice for Smart Society, Hiroshima University",
     "url": "https://www.hiroshima-u.ac.jp/en"
   },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Foreign Trade University — Ho Chi Minh City Campus"
+  },
   "knowsAbout": [
+    "Mathematical optimization",
+    "Mixed integer nonlinear programming",
+    "Facility location and siting models",
     "Electric vehicle charging infrastructure",
-    "Geographic information systems",
-    "Spatial optimisation",
-    "Urban infrastructure planning"
+    "Python",
+    "International economics"
   ],
   "sameAs": [
     "https://github.com/tulliavu",
-    "https://www.linkedin.com/in/trucquynhvu136/"
+    "https://www.linkedin.com/in/trucquynhvu136/",
+    "https://scholar.google.com/citations?user=YP2NkDLbvwIC&hl=en"
   ]
 }
 </script>
@@ -64,9 +72,9 @@
     <a class="name" href="#top">Vu Truc Quynh</a>
     <nav aria-label="Sections">
       <a href="#research">Research</a>
-      <a href="#writing">Writing</a>
+      <a href="#publications">Publications</a>
       <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
+      <a href="#methods">Methods</a>
     </nav>
   </header>
 
@@ -76,13 +84,14 @@
       <img class="portrait" src="images/avatar.jpg" alt="Portrait of Vu Truc Quynh" width="675" height="900" fetchpriority="high">
       <div>
         <h1>Vu Truc Quynh</h1>
-        <p class="standfirst">Master&rsquo;s student in infrastructure planning at <a href="https://www.hiroshima-u.ac.jp/en">Hiroshima University</a>, supervised by <a href="https://seeds.office.hiroshima-u.ac.jp/profile/en.a63149f0ebc98d0e520e17560c007669.html">Prof. Ayyoob Sharifi</a> and Prof. Omar.</p>
-        <p>My research looks at where public electric vehicle charging stations should go in Ho Chi Minh City — combining GIS analysis, spatial modelling and infrastructure planning to support Vietnam&rsquo;s shift to cleaner urban mobility.</p>
+        <p class="standfirst">I build optimization models for electric vehicle charging infrastructure. Master of Philosophy candidate at the Graduate School of Innovation and Practice for Smart Society (SmaSo), <a href="https://www.hiroshima-u.ac.jp/en">Hiroshima University</a> — supervised by <a href="https://seeds.office.hiroshima-u.ac.jp/profile/en.a63149f0ebc98d0e520e17560c007669.html">Prof. Ayyoob Sharifi</a> and Assistant Professor Omar.</p>
+        <p>Siting and sizing a public charging network is a facility location problem: fixed costs, capacity limits and demand that shifts with every station you add. I formulate it as a mixed integer nonlinear program and solve it in Python, with Ho Chi Minh City as the case study.</p>
+        <p>I came to this from international economics, and what holds my attention is the optimization — stating an infrastructure problem precisely enough that a solver can answer it. I am looking to collaborate on optimization and programming applications in EV management — <a href="mailto:vutrucquynh136@gmail.com">write to me</a>.</p>
         <p class="contact">
           <a href="mailto:vutrucquynh136@gmail.com">Email</a>
+          <a href="https://scholar.google.com/citations?user=YP2NkDLbvwIC&amp;hl=en">Google Scholar</a>
           <a href="https://github.com/tulliavu" rel="me">GitHub</a>
           <a href="https://www.linkedin.com/in/trucquynhvu136/" rel="me">LinkedIn</a>
-          <a href="https://sites.google.com/view/asharifi/students">Lab page</a>
         </p>
       </div>
     </div>
@@ -91,32 +100,23 @@
       <h2 id="research-label">Research</h2>
       <div class="body">
         <article class="entry">
-          <h3>Siting optimisation for public EV charging stations in Ho Chi Minh City</h3>
-          <p class="meta">Master&rsquo;s thesis · Supervised by Prof. Ayyoob Sharifi and Prof. Omar · Advisory: Dr. Huy</p>
-          <p>Where charging stations are placed decides who can actually use them. This thesis looks for placements that maximise coverage and accessibility across the city, drawing on:</p>
-          <ul>
-            <li>Geographic Information Systems (GIS) analysis</li>
-            <li>Spatial optimisation modelling</li>
-            <li>Accessibility and demand assessment</li>
-            <li>Infrastructure sustainability considerations</li>
-          </ul>
+          <p class="years">Oct 2025 – present</p>
+          <h3>Siting Optimization of Public Electric Vehicle Charging Stations: A Case Study of Ho Chi Minh City</h3>
+          <p class="meta">Master&rsquo;s thesis · Supervised by Prof. Ayyoob Sharifi and Assistant Professor Omar · Advisory: Dr. Huy</p>
+          <p>Where stations are placed, and how much capacity each one gets, decides whether the network is usable at all. The thesis treats this as a constrained optimization problem over Ho Chi Minh City rather than a planning judgement.</p>
+        </article>
+        <article class="entry">
+          <h3>Placement Optimization of Electric Vehicle Charging Stations in Ho Chi Minh City Using a Mixed Integer Nonlinear Programming Model</h3>
+          <p class="meta">Bachelor&rsquo;s thesis, Foreign Trade University (FTU2), 2025 · 8.5/10</p>
+          <p>The mixed integer nonlinear formulation of the same problem, and the starting point for the current work.</p>
         </article>
       </div>
     </section>
 
-    <section id="writing" aria-labelledby="writing-label">
-      <h2 id="writing-label">Writing</h2>
+    <section id="publications" aria-labelledby="publications-label">
+      <h2 id="publications-label">Publications</h2>
       <div class="body">
-        <article class="entry">
-          <h3>Systematic literature review: methods for EV charging station siting</h3>
-          <p class="meta">Thesis chapter · In progress</p>
-          <p>A review of siting methodologies, optimisation algorithms and assessment frameworks used worldwide, with attention to what transfers to Southeast Asian cities.</p>
-        </article>
-        <article class="entry">
-          <h3>Conference presentations and workshops</h3>
-          <p class="meta">University seminars and international conferences</p>
-          <p>On sustainable urban infrastructure and regional planning.</p>
-        </article>
+        <p>A current list is on <a href="https://scholar.google.com/citations?user=YP2NkDLbvwIC&amp;hl=en">Google Scholar</a>.</p>
       </div>
     </section>
 
@@ -124,35 +124,35 @@
       <h2 id="education-label">Education</h2>
       <div class="body">
         <article class="entry">
-          <p class="years">Oct 2023 – present</p>
-          <h3>MSc, Hiroshima University</h3>
-          <p class="meta">International Graduate Program</p>
+          <p class="years">Oct 2025 – present</p>
+          <h3>Master of Philosophy, Hiroshima University</h3>
+          <p class="meta">Graduate School of Innovation and Practice for Smart Society (SmaSo), Japan</p>
           <ul>
-            <li>Thesis on siting optimisation of public EV charging stations in Ho Chi Minh City</li>
-            <li>Supervisors: Prof. Ayyoob Sharifi (primary), Prof. Omar</li>
-            <li>Expected completion September 2025</li>
+            <li>Thesis: Siting Optimization of Public Electric Vehicle Charging Stations: A Case Study of Ho Chi Minh City</li>
+            <li>Supervisors: Prof. Ayyoob Sharifi, Assistant Professor Omar</li>
           </ul>
         </article>
         <article class="entry">
-          <p class="years">Earlier</p>
-          <h3>Undergraduate studies, Vietnam</h3>
+          <p class="years">Sep 2021 – Apr 2025</p>
+          <h3>Bachelor of International Economics, Foreign Trade University</h3>
+          <p class="meta">Ho Chi Minh City Campus (FTU2), Vietnam</p>
           <ul>
-            <li>Regional planning and infrastructure development</li>
-            <li>Based in Gia Lai and Ho Chi Minh City</li>
+            <li>GPA 3.79 / 4.00</li>
+            <li>Thesis: Placement Optimization of Electric Vehicle Charging Stations in Ho Chi Minh City Using a Mixed Integer Nonlinear Programming Model — 8.5/10</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section id="skills" aria-labelledby="skills-label">
-      <h2 id="skills-label">Skills</h2>
+    <section id="methods" aria-labelledby="methods-label">
+      <h2 id="methods-label">Methods</h2>
       <div class="body">
         <ul class="plain">
-          <li>GIS and spatial analysis</li>
-          <li>Spatial statistics and data modelling</li>
-          <li>Optimisation methods</li>
-          <li>Infrastructure planning and urban sustainability</li>
-          <li>Research methods and academic writing</li>
+          <li>Mathematical optimization — facility location and siting models</li>
+          <li>Mixed integer nonlinear programming (MINLP)</li>
+          <li>Python, for formulating and solving models</li>
+          <li>Data analysis</li>
+          <li>International economics</li>
         </ul>
       </div>
     </section>
@@ -160,7 +160,7 @@
     <section id="next" aria-labelledby="next-label">
       <h2 id="next-label">Next</h2>
       <div class="body">
-        <p>After the Master&rsquo;s, I plan to start PhD studies in September 2027, continuing on sustainable urban infrastructure and environmental planning.</p>
+        <p>After the Master&rsquo;s, I plan to start PhD studies in September 2027, continuing on optimization for electric vehicle charging infrastructure.</p>
       </div>
     </section>
 
