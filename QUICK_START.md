@@ -97,11 +97,20 @@ Then run the checker:
 python3 scripts/check.py
 ```
 
-It catches the things that are invisible until the page is live: a nav link
-pointing at a section you renamed, a photo referenced under the wrong
-filename, a duplicated `id`, an unescaped `&` in a URL, a stray brace or an
-undefined variable in the CSS, and a photo large enough to slow the page
-down. The same script runs on GitHub after every push.
+It catches the things that are invisible until the page is live:
+
+- a nav link pointing at a section you renamed, or listed out of order
+- a photo or stylesheet referenced under the wrong filename
+- a duplicated `id`, or an `aria-labelledby` with nothing to point at
+- an unescaped `&` in a URL, which silently truncates the link
+- an em or en dash, which the page does not use
+- invalid JSON-LD, a stray brace in the CSS, an undefined custom property
+- a class styled but never used, or used but never styled
+- `theme-color` or the favicon drifting from the colours in `:root`
+- `width`/`height` or `og:image` dimensions that no longer match the photo
+- a photo large enough to slow the page down
+
+The same script runs on GitHub after every push.
 
 ## Publish
 
