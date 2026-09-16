@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .lightning { fill: #0066cc; }
+    @media (prefers-color-scheme: dark) {
+      .lightning { fill: #4da6ff; }
+    }
+  </style>
+  <path class="lightning" d="M16 2c7.732 0 14 6.268 14 14s-6.268 14-14 14S2 23.732 2 16 8.268 2 16 2m0-2C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0z"/>
+  <path class="lightning" d="M16 6l-6 8h4v8l6-8h-4V6z"/>
+</svg>
