@@ -279,10 +279,14 @@ li { margin-bottom: 0.2rem; }
 
   .intro { padding: 1.5rem 0 2rem; }
 
-  section {
-    padding: 1.5rem 0;
-    break-inside: avoid;
-  }
+  section { padding: 1.5rem 0; }
+
+  /* Keep a single entry whole rather than a whole section. A section that
+     outgrows the page cannot be kept together, and asking for it strands a
+     blank page before it. */
+  .entry { break-inside: avoid; }
+
+  h2, h3 { break-after: avoid; }
 
   a { text-decoration: none; }
 
