@@ -286,7 +286,7 @@ li { margin-bottom: 0.2rem; }
 
   a { text-decoration: none; }
 
-  /* Links are not clickable on paper — spell them out */
+  /* Links are not clickable on paper, so spell them out */
   .body a[href^="http"]::after,
   .contact a[href^="http"]::after {
     content: " (" attr(href) ")";

@@ -1,7 +1,7 @@
 # How to edit this site
 
 Everything is in two files: `index.html` for content, `css/style.css` for
-design. There is no build step — save the file, reload the browser.
+design. There is no build step: save the file, reload the browser.
 
 ## Replace the photo
 
@@ -37,7 +37,7 @@ All design decisions live in the `:root` block at the top of `css/style.css`:
 ```
 
 Dark mode repeats those same names inside the
-`@media (prefers-color-scheme: dark)` block just below — change a colour in one
+`@media (prefers-color-scheme: dark)` block just below. Change a colour in one
 place, change it in the other too.
 
 The design deliberately has no accent colour. If you want one, the natural
@@ -74,10 +74,10 @@ Then add it to the navigation at the top of `index.html`:
 
 Useful classes:
 
-- `.entry` — one item, with spacing below it
-- `.years` — small date line above a heading
-- `.meta` — small grey line below a heading
-- `.plain` — a list with no bullets (used by the Skills section)
+- `.entry`: one item, with spacing below it
+- `.years`: small date line above a heading
+- `.meta`: small grey line below a heading
+- `.plain`: a list with no bullets (used by the Methods section)
 
 To remove a section, delete the whole `<section>` block and its `<a>` in the
 navigation.
@@ -88,8 +88,20 @@ navigation.
 python3 -m http.server 4173
 ```
 
-Open <http://localhost:4173>, and check it at phone width too — the layout
+Open <http://localhost:4173>, and check it at phone width too. The layout
 drops to a single column below 46rem (736 px).
+
+Then run the checker:
+
+```bash
+python3 scripts/check.py
+```
+
+It catches the things that are invisible until the page is live: a nav link
+pointing at a section you renamed, a photo referenced under the wrong
+filename, a duplicated `id`, an unescaped `&` in a URL, a stray brace or an
+undefined variable in the CSS, and a photo large enough to slow the page
+down. The same script runs on GitHub after every push.
 
 ## Publish
 
@@ -106,7 +118,7 @@ GitHub rebuilds within a minute or two.
 **Changes not showing.** Hard-refresh (Cmd+Shift+R). GitHub Pages also caches
 for a short while.
 
-**Image not loading.** Filenames are case-sensitive on the server —
+**Image not loading.** Filenames are case-sensitive on the server:
 `Avatar.jpg` and `avatar.jpg` are different files.
 
 **`tulliavu.github.io` shows 404.** That address only works if the repository
