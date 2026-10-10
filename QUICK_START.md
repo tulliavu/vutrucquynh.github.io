@@ -106,6 +106,8 @@ It catches the things that are invisible until the page is live:
 - an em or en dash, which the page does not use
 - invalid JSON-LD, a stray brace in the CSS, an undefined custom property
 - a class styled but never used, or used but never styled
+- a changed `style.css` whose `?v=` token in the link was not updated,
+  which leaves browsers rendering the new HTML against the cached old CSS
 - `theme-color` or the favicon drifting from the colours in `:root`
 - `width`/`height` or `og:image` dimensions that no longer match the photo
 - a photo large enough to slow the page down

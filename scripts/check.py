@@ -9,6 +9,7 @@ a query string, a stray brace in the stylesheet.
     python3 scripts/check.py
 """
 
+import hashlib
 import html.parser
 import json
 import re
@@ -179,6 +180,18 @@ def jpeg_size(path):
         offset += 2 + int.from_bytes(data[offset + 2:offset + 4], "big")
     return None
 
+
+# A changed stylesheet served under the same URL is held by browsers that
+# already have the old one, which renders the new HTML against old rules.
+# The token in the link has to track the file.
+digest = hashlib.sha1(css.encode()).hexdigest()[:8]
+link = re.search(r'href="css/style\.css(?:\?v=([0-9a-f]+))?"', source)
+if not link:
+    fail("index.html: no stylesheet link")
+elif link.group(1) != digest:
+    fail(f"index.html: stylesheet is linked as ?v={link.group(1) or 'none'}, "
+         f"but style.css now hashes to {digest} - change the link to "
+         f"?v={digest}")
 
 photo = ROOT / "images" / "avatar.jpg"
 if photo.is_file():
