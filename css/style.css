@@ -136,6 +136,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ---------- Shared two-column grid ---------- */
 .intro,
 section,
+.epigraph,
 .colophon {
   display: grid;
   grid-template-columns: var(--gutter) minmax(0, var(--measure));
@@ -229,6 +230,28 @@ li { margin-bottom: 0.2rem; }
 .plain { list-style: none; padding: 0; margin: 0; }
 .plain li { margin-bottom: 0.35rem; }
 
+/* ---------- Epigraph ---------- */
+.epigraph {
+  margin: 0;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.epigraph > * { grid-column: 2; }
+
+.epigraph p {
+  font-size: 1.1875rem;
+  line-height: 1.55;
+  margin: 0 0 0.7rem;
+}
+
+.epigraph cite {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-style: normal;
+  color: var(--ink-soft);
+}
+
 /* ---------- Colophon ---------- */
 .colophon {
   padding: 2.5rem 0 0;
@@ -245,6 +268,7 @@ li { margin-bottom: 0.2rem; }
 @media (max-width: 46rem) {
   .intro,
   section,
+  .epigraph,
   .colophon {
     grid-template-columns: minmax(0, 1fr);
     gap: 1rem;
@@ -256,6 +280,7 @@ li { margin-bottom: 0.2rem; }
   }
 
   section > h2 { margin: 0; }
+  .epigraph > *,
   .colophon > * { grid-column: 1; }
 }
 
